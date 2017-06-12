@@ -31,19 +31,19 @@
 		
 			$link=mysqli_connect("mysql.gebook1.svc","shardul","mote")or die("Can't Connect...");
 			
-			mysql_select_db("shop",$link) or die("Can't Connect to Database...");
+			mysqli_select_db("shop",$link) or die("Can't Connect to Database...");
 			
 			$unm=$_POST['usernm'];
 			
 			$q="select * from user where u_unm='$unm'";
 			$q1="select * from admin where a_unm='$unm'";
 			
-			$res=mysql_query($q,$link) or die("wrong query");
+			$res=mysqli_query($q,$link) or die("wrong query");
 			
-			$row=mysql_fetch_assoc($res);
-			$res1=mysql_query($q1,$link) or die("wrong query");
+			$row=mysqli_fetch_assoc($res);
+			$res1=mysqli_query($q1,$link) or die("wrong query");
 			
-			$row1=mysql_fetch_assoc($res1);
+			$row1=mysqli_fetch_assoc($res1);
 			
 			if(!empty($row))
 			{
