@@ -31,7 +31,7 @@
 		
 			$link=mysqli_connect("mysql.gebook1.svc","shardul","mote")or die("Can't Connect...");
 			
-			mysqli_select_db( mysqli $link ,"shop" ) or die("Can't Connect to Database...");
+			mysqli_select_db($link ,"shop" ) or die("Can't Connect to Database...");
 			
 			$unm=$_POST['usernm'];
 			
