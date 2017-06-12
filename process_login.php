@@ -40,10 +40,10 @@
 			
 			$res=mysqli_query($q,$link) or die("wrong query");
 			
-			$row=mysqli_fetch_assoc($res);
-			$res1=mysqli_query($q1,$link) or die("wrong query");
+			$row=mysql_fetch_assoc($res);
+			$res1=mysql_query($q1,$link) or die("wrong query");
 			
-			$row1=mysqli_fetch_assoc($res1);
+			$row1=mysql_fetch_assoc($res1);
 			
 			if(!empty($row))
 			{
