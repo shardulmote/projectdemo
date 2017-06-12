@@ -38,7 +38,7 @@
 			$q="select * from user where u_unm='$unm'";
 			$q1="select * from admin where a_unm='$unm'";
 			
-			$res=mysqli_query($q,$link) or die("wrong query");
+			$res=mysql_query($q,$link) or die("wrong query");
 			
 			$row=mysql_fetch_assoc($res);
 			$res1=mysql_query($q1,$link) or die("wrong query");
