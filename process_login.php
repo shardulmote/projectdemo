@@ -29,7 +29,7 @@
 			
 			
 		
-			$link=mysql_connect("mysql.gebook1.svc","shardul","mote")or die("Can't Connect...");
+			$link=mysqli_connect("mysql.gebook1.svc","shardul","mote")or die("Can't Connect...");
 			
 			mysql_select_db("shop",$link) or die("Can't Connect to Database...");
 			
