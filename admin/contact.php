@@ -1,12 +1,12 @@
 <?php 
 session_start();
-$link=mysql_connect("localhost","root","")or die("Can't Connect...");
+$link=mysqli_connect("mysql.gebook1.svc","shardul","mote")or die("Can't Connect...");
 			
-	mysql_select_db("shop",$link) or die("Can't Connect to Database...");
+	mysqli_select_db($link,"shop") or die("Can't Connect to Database...");
 	$q="select * from contact";
-	 $res=mysql_query($q,$link) or die("Can't Execute Query...");
+	 $res=mysqli_query($link,$q) or die("Can't Execute Query...");
 
-	mysql_close($link);
+	mysqli_close($link);
 	?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
