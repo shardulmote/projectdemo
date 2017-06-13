@@ -65,7 +65,7 @@ Description: A two-column, fixed-width and lightweight template ideal for 1024x7
 						</tr>
 						<?php
 							$count=1;
-							while($row=mysql_fetch_assoc($res))
+							while($row=mysqli_fetch_assoc($res))
 							{
 							echo '<tr>
 										<td>'.$count.'
