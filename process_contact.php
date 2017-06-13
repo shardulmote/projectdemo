@@ -40,8 +40,8 @@
 			
 			mysqli_select_db($link,"shop") or die("Can't Connect to Database...");
 			
-			$query="insert into contact(con_nm,con_email,con_query)
-			values('$nm','$email','$question')";
+			$query="insert into contact(con_id,con_nm,con_email,con_query)
+			values(1,'$nm','$email','$question')";
 			
 			mysqli_query($link,$query) or die("Can't Execute Query...");
 			
