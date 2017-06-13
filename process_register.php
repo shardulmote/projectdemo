@@ -14,11 +14,11 @@
 			$msg.="<li>Please Enter your Password Again.....";
 		}
 		
-		if(!eregi("^[a-z0-9_]+[a-z0-9_.]*@[a-z0-9_-]+[a-z0-9_.-]*\.[a-z]{2,5}$",$_POST['mail']))
+		/*if(!eregi("^[a-z0-9_]+[a-z0-9_.]*@[a-z0-9_-]+[a-z0-9_.-]*\.[a-z]{2,5}$",$_POST['mail']))
 		{
 			$msg.="<li>Please Enter Your Valid Email Address...";
 		}
-		
+		*/
 		
 		if(strlen($_POST['pwd'])>10)
 		{
