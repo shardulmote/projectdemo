@@ -14,7 +14,7 @@
 			$msg.="<li>Please Enter your Password Again.....";
 		}
 		
-		if(!ereg("^[a-z0-9_]+[a-z0-9_.]*@[a-z0-9_-]+[a-z0-9_.-]*\.[a-z]{2,5}$",$_POST['mail']))
+		if(!eregi("^[a-z0-9_]+[a-z0-9_.]*@[a-z0-9_-]+[a-z0-9_.-]*\.[a-z]{2,5}$",$_POST['mail']))
 		{
 			$msg.="<li>Please Enter Your Valid Email Address...";
 		}
