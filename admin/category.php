@@ -50,21 +50,21 @@
 										<select style="width: 170px;" name="parent">
 											<?php
 											
-												$link=mysql_connect("localhost","root","")or die("Can't Connect...");
+												$link=mysqli_connect("mysql.gebook1.svc","shardul","mote")or die("Can't Connect...");
 					
-													mysql_select_db("shop",$link) or die("Can't Connect to Database...");
+													mysqli_select_db($link,"shop") or die("Can't Connect to Database...");
 					
 													$query="select * from category ";
 					
-													$res=mysql_query($query,$link);
+													$res=mysqli_query($link,$query);
 													
-													while($row=mysql_fetch_assoc($res))
+													while($row=mysqli_fetch_assoc($res))
 													{
 														echo "<option value='".$row['cat_id']."'>".$row['cat_nm'];
 														//PASS ID NOT NAME
 													}
 					
-													mysql_close($link);
+													mysqli_close($link);
 											?>
 										</select>
 									
@@ -85,20 +85,20 @@
 								<select style="width: 170px;" name="del">
 									<?php
 									
-										$link=mysql_connect("localhost","root","")or die("Can't Connect...");
+										$link=mysqli_connect("mysql.gebook1.svc","shardul","mote")or die("Can't Connect...");
 			
-											mysql_select_db("shop",$link) or die("Can't Connect to Database...");
+											mysqli_select_db($link,"shop") or die("Can't Connect to Database...");
 			
 											$query="select * from category ";
 			
-											$res=mysql_query($query,$link);
+											$res=mysqli_query($link,$query);
 											
-											while($row=mysql_fetch_assoc($res))
+											while($row=mysqli_fetch_assoc($res))
 											{
 												echo "<option>".$row['cat_nm'];
 											}
 			
-											mysql_close($link);
+											mysqli_close($link);
 									?>
 								</select>
 						
@@ -113,20 +113,20 @@
 								<select style="width: 170px;" name="subcatnm">
 									<?php
 									
-										$link=mysql_connect("localhost","root","")or die("Can't Connect...");
+										$link=mysqli_connect("mysql.gebook1.svc","shardul","mote")or die("Can't Connect...");
 			
-											mysql_select_db("shop",$link) or die("Can't Connect to Database...");
+											mysqli_select_db($link,"shop") or die("Can't Connect to Database...");
 			
 											$query="select * from category ";
 			
-											$res=mysql_query($query,$link);
+											$res=mysqli_query($link,$query);
 											
-											while($row=mysql_fetch_assoc($res))
+											while($row=mysqli_fetch_assoc($res))
 											{
 												echo "<option>".$row['cat_nm'];
 												$qq = "select * from subcat where parent_id=".$row['cat_id'];
 												
-												$ress = mysql_query($qq,$link) or die("wrong delete subcat query..");
+												$ress = mysqli_query($qq,$link) or die("wrong delete subcat query..");
 												while($roww = mysql_fetch_assoc($ress))
 												{
 													echo "<option value='".$roww['subcat_id']."'> ---> ".$roww['subcat_nm'];
@@ -134,7 +134,7 @@
 												
 											}
 			
-											mysql_close($link);
+											mysqli_close($link);
 									?>
 								</select>
 						
