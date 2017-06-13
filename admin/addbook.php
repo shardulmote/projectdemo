@@ -43,7 +43,7 @@
 						<select style="width: 200px;" name="cat">
 								<?php
 									
-										$link=mysql_connect("mysql.gebook1.svc","shardul","mote")or die("Can't Connect...");
+										$link=mysqli_connect("mysql.gebook1.svc","shardul","mote")or die("Can't Connect...");
 			
 											mysqli_select_db($link,"shop") or die("Can't Connect to Database...");
 			
