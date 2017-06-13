@@ -53,7 +53,7 @@
 			$query="insert into user(u_fnm,u_unm,u_pwd,u_gender,u_email,u_contact,u_city)
 			values('$fnm','$unm','$pwd','$gender','$email','$contact','$city')";
 			
-			mysql_query($link,$query) or die("Can't Execute Query...");
+			mysqli_query($link,$query) or die("Can't Execute Query...");
 			header("location:register.php?ok=1");
 		}
 	}
