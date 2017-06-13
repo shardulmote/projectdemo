@@ -43,22 +43,22 @@
 						<select style="width: 200px;" name="cat">
 								<?php
 									
-										$link=mysql_connect("localhost","root","")or die("Can't Connect...");
+										$link=mysql_connect("mysql.gebook1.svc","shardul","mote")or die("Can't Connect...");
 			
-											mysql_select_db("shop",$link) or die("Can't Connect to Database...");
+											mysqli_select_db($link,"shop") or die("Can't Connect to Database...");
 			
 											$query="select * from category ";
 			
-											$res=mysql_query($query,$link);
+											$res=mysqli_query($link,$query);
 											
-											while($row=mysql_fetch_assoc($res))
+											while($row=mysqli_fetch_assoc($res))
 											{
 												echo "<option disabled>".$row['cat_nm'];
 												
 												$q2 = "select * from subcat where parent_id = ".$row['cat_id'];
 												
-												$res2 = mysql_query($q2,$link) or die("Can't Execute Query..");
-												while($row2 = mysql_fetch_assoc($res2))
+												$res2 = mysqli_query($link,$q2) or die("Can't Execute Query..");
+												while($row2 = mysqli_fetch_assoc($res2))
 												{	
 													echo '<option value="'.$row2['subcat_id'].'"> ---> '.$row2['subcat_nm'];
 									
@@ -66,7 +66,7 @@
 												}
 												
 											}
-											mysql_close($link);
+											mysqli_close($link);
 								?>
 						</select>
 						<br><br>
